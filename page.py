@@ -24,6 +24,10 @@ def func(text):
     return " ".join(y)
 model=pkl.load(open('model.pkl','rb'))
 vectorizer=pkl.load(open('vectorizer.pkl','rb'))
+st.set_page_config(
+    page_title="SMS Protect",  # Title that appears in the tab
+    page_icon="📱",  # Icon that appears in the tab
+)
 st.title('Spam Classifier')
 ip=st.text_area('Enter the message')
 if st.button('Predict'):
